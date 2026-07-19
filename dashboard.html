@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial,sans-serif;
+            background:#f4f4f4;
+        }
+
+        .header{
+            background:#007BFF;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        .container{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            margin-top:40px;
+        }
+
+        .card{
+            width:220px;
+            background:white;
+            margin:20px;
+            padding:25px;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .card h3{
+            color:#007BFF;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:15px;
+            padding:10px 20px;
+            background:#007BFF;
+            color:white;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .btn:hover{
+            background:#0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Student Attendance Management System</h1>
+    <p>Welcome, Admin</p>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Students</h3>
+        <p>View and manage student details.</p>
+        <a href="/students" class="btn">Open</a>
+    </div>
+
+    <div class="card">
+        <h3>Attendance</h3>
+        <p>Mark daily attendance.</p>
+        <a href="/attendance" class="btn">Open</a>
+    </div>
+
+    <div class="card">
+        <h3>Reports</h3>
+        <p>View attendance reports.</p>
+        <a href="/report" class="btn">Open</a>
+    </div>
+
+    <div class="card">
+        <h3>Logout</h3>
+        <p>Exit the system.</p>
+        <a href="/logout" class="btn">Logout</a>
+    </div>
+
+</div>
+
+</body>
+</html>
+

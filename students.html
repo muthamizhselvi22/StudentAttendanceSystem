@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            background:#f4f4f4;
+            margin:20px;
+        }
+
+        h2{
+            color:#007BFF;
+        }
+
+        form{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            width:400px;
+            margin-bottom:30px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+            box-sizing:border-box;
+        }
+
+        button{
+            background:#007BFF;
+            color:white;
+            padding:10px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        table,th,td{
+            border:1px solid #ddd;
+        }
+
+        th{
+            background:#007BFF;
+            color:white;
+        }
+
+        th,td{
+            padding:10px;
+            text-align:center;
+        }
+
+        a{
+            text-decoration:none;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Student Management</h2>
+
+<form action="/add_student" method="POST">
+
+    <input type="text"
+           name="name"
+           placeholder="Student Name"
+           required>
+
+    <input type="text"
+           name="roll"
+           placeholder="Roll Number"
+           required>
+
+    <input type="text"
+           name="department"
+           placeholder="Department"
+           required>
+
+    <button type="submit">Add Student</button>
+
+</form>
+
+<table>
+
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Roll No</th>
+    <th>Department</th>
+</tr>
+
+{% for student in students %}
+
+<tr>
+    <td>{{ student[0] }}</td>
+    <td>{{ student[1] }}</td>
+    <td>{{ student[2] }}</td>
+    <td>{{ student[3] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/dashboard">⬅ Back to Dashboard</a>
+
+</body>
+</html>
+

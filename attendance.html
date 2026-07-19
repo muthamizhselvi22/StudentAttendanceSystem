@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mark Attendance</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            margin:30px;
+        }
+
+        .container{
+            width:500px;
+            margin:auto;
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        h2{
+            text-align:center;
+            color:#007BFF;
+        }
+
+        select,input{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:#007BFF;
+            color:white;
+            border:none;
+            border-radius:5px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#0056b3;
+        }
+
+        a{
+            text-decoration:none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Mark Attendance</h2>
+
+<form action="/save_attendance" method="POST">
+
+<label>Select Student</label>
+
+<select name="student_id">
+
+{% for student in students %}
+
+<option value="{{ student[0] }}">
+{{ student[1] }} ({{ student[2] }})
+</option>
+
+{% endfor %}
+
+</select>
+
+<label>Date</label>
+
+<input type="date" name="attendance_date" required>
+
+<label>Status</label>
+
+<select name="status">
+<option value="Present">Present</option>
+<option value="Absent">Absent</option>
+</select>
+
+<button type="submit">
+Save Attendance
+</button>
+
+</form>
+
+<br>
+
+<a href="/dashboard">⬅ Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>
+
+
+
