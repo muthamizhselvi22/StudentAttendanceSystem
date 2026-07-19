@@ -131,7 +131,7 @@ http://127.0.0.1:5000
 
 ## 👩‍💻 Author
 
-**Muthamizh Revathi**
+**Muthamizhselvi M**
 
 B.E. Computer Science and Engineering
 
